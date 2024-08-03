@@ -1,15 +1,10 @@
-/*Le pseudo-élément `:root` en CSS permet de définir des variables globales pour un document, 
-représentant l'élément `<html>`. Utilisé pour centraliser la gestion des styles comme 
-les couleurs et les polices, il facilite la maintenance du CSS en rendant 
-les valeurs facilement réutilisables et modifiables dans toute la feuille de style.*/
-
 :root {
     /* Définition des couleurs de base */
     --teal-1: #265C4B; /* Teal foncé */
     --teal-2: #146551; /* Teal moyen foncé */
     --teal-3: #007566; /* Teal vif */
     --teal-4: #589A8D; /* Teal clair */
-    --teal-5: #fff; /* Blanc très clair */
+    --teal-5: #8FC1B5; /* Teal très clair */
     --Noir-6: #000000; /*Noir*/
     --Blanc-7: #ffffff; /*Blanc*/
 
@@ -25,6 +20,7 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 }
 
 /*Intégration de nos polices d'écritures générales pour notre texte, titre et les sous-titres*/
+
 :root {
     /* Polices */
     --font-title: 'Montserrat', sans-serif;
@@ -43,7 +39,7 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 body {
     margin: 0;
     padding: 0;
-    color: var(--color-text);
+    color: var(--color-white);
     background-color: var(--color-background);
     font-family: var(--font-text);
     font-size: var(--font-size-normal);
