@@ -89,7 +89,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 0 20px 0 75px;
+    padding: 0 20px 0 70px;
     margin-left: -50px; /* Ajustement pour le chevauchement */
     z-index: 1; /* S'assurer que .nom se superpose à .image */
     position: relative;

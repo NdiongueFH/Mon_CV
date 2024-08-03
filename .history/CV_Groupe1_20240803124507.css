@@ -17,8 +17,8 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 
     --color-title: var(--teal-1); /* Couleur pour les titres */
     --color-subtitle: var(--teal-3); /* Couleur pour les sous-titres */
-    --color-paragraph: var(--teal-2); /* Couleur pour les paragraphes */
-    --color-border: var(--teal-4); /* Couleur pour les bordures */
+    --color-paragraph: var(--teal-4); /* Couleur pour les paragraphes */
+    --color-border: var(--teal-2); /* Couleur pour les bordures */
     --color-backgroundFoncé: var(--teal-1); /*Couleur de fond foncée*/
     --color-background: var(--teal-5); /* Couleur de fond général */
     --color-text: var(--Noir-6); /*Couleur pour le texte de fond*/
@@ -38,13 +38,12 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
     --font-weight-normal: 400; /* Poids normal de la police */
     --font-weight-bold: 700; /* Poids en gras */
-    /*Pour le profil la taile du nom et du sous-titre*/
-    --font-size-titleProfil: 45px;
-    --font-size-subtitleProfil: 30px;
 }
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
 body {
+    margin: 0;
+    padding: 0;
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-text);
@@ -59,50 +58,36 @@ body {
 #identite {
     display: flex;
     align-items: center; /* Pour aligner verticalement les éléments à l'intérieur */
-    background: none;
 }
 
 /*Image*/
 .image {
     background-color: var(--color-background);
-    border: 12px solid var(--color-border);
-    width: 300px;  /* Assurez-vous que le conteneur est carré */
-    height: 300px;
+    border: 3px solid var(--color-border);
+    width: 200px;  /* Assurez-vous que le conteneur est carré */
+    height: 200px;
     border-radius: 50%;  /* Rend l'image ronde */
     overflow: hidden;  /* Cache les parties de l'image qui débordent */
-    z-index: 2; /* Nous Plaçons l'image au-dessus de .nom */
-    position: relative; /* Nécessaire pour appliquer z-index */
 }
 
 #image_profil {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* Garantit que l'image couvre tout l'espace sans déformation */
+    object-fit: cover;  /* Garantit que l'image couvre tout l'espace sans déformation */
 }
 
 .nom {
     background-color: var(--color-backgroundFoncé);
-    width: 30%;
+    width: calc(100% - 800px); /* Calculer la largeur pour combler le reste de l'espace, en soustrayant la largeur de l'image */
+    color: var(--color-white);
     height: 200px; /* Aligner la hauteur avec celle de l'image */
     display: flex;
-    color: var(--color-white);
     flex-direction: column;
     justify-content: center;
-    text-align: left;
-    padding: 0 20px 0 75px;
+    padding: 0 20px;
+    border-radius: 0 0px 0px 80px; /* Rayon de bordure seulement sur le côté droit */
     margin-left: -50px; /* Ajustement pour le chevauchement */
     z-index: 1; /* S'assurer que .nom se superpose à .image */
-    position: relative;
-}
-#name_cv{
-    font-family: var(--font-title);
-    font-size: var(--font-size-titleProfil);
-    font-weight: var(--font-weight-bold);
-}
-#function {
-    font-family: var(--font-subtitle);
-    font-size: var(--font-size-subtitleProfil);
-    font-weight: var(--font-weight-normal);
 }
     /*Fin Partie profil de Mon_Cv*/
 /*Fin Partie Ndiawar Diop*/

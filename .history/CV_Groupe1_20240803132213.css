@@ -17,8 +17,8 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 
     --color-title: var(--teal-1); /* Couleur pour les titres */
     --color-subtitle: var(--teal-3); /* Couleur pour les sous-titres */
-    --color-paragraph: var(--teal-2); /* Couleur pour les paragraphes */
-    --color-border: var(--teal-4); /* Couleur pour les bordures */
+    --color-paragraph: var(--teal-4); /* Couleur pour les paragraphes */
+    --color-border: var(--teal-2); /* Couleur pour les bordures */
     --color-backgroundFoncé: var(--teal-1); /*Couleur de fond foncée*/
     --color-background: var(--teal-5); /* Couleur de fond général */
     --color-text: var(--Noir-6); /*Couleur pour le texte de fond*/
@@ -39,12 +39,14 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --font-weight-normal: 400; /* Poids normal de la police */
     --font-weight-bold: 700; /* Poids en gras */
     /*Pour le profil la taile du nom et du sous-titre*/
-    --font-size-titleProfil: 45px;
-    --font-size-subtitleProfil: 30px;
+    --font-size-titleProfil: 40px;
+    --font-size-subtitleProfil: 20px;
 }
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
 body {
+    margin: 0;
+    padding: 0;
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-text);
@@ -59,13 +61,12 @@ body {
 #identite {
     display: flex;
     align-items: center; /* Pour aligner verticalement les éléments à l'intérieur */
-    background: none;
 }
 
 /*Image*/
 .image {
     background-color: var(--color-background);
-    border: 12px solid var(--color-border);
+    border: 3px solid var(--color-border);
     width: 300px;  /* Assurez-vous que le conteneur est carré */
     height: 300px;
     border-radius: 50%;  /* Rend l'image ronde */
@@ -89,7 +90,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 0 20px 0 75px;
+    padding: 0 20px;
     margin-left: -50px; /* Ajustement pour le chevauchement */
     z-index: 1; /* S'assurer que .nom se superpose à .image */
     position: relative;

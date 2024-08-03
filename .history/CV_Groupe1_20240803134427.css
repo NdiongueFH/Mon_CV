@@ -39,8 +39,8 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --font-weight-normal: 400; /* Poids normal de la police */
     --font-weight-bold: 700; /* Poids en gras */
     /*Pour le profil la taile du nom et du sous-titre*/
-    --font-size-titleProfil: 45px;
-    --font-size-subtitleProfil: 30px;
+    --font-size-titleProfil: 40px;
+    --font-size-subtitleProfil: 25px;
 }
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
@@ -89,7 +89,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 0 20px 0 75px;
+    padding: 0 20px 0 70px;
     margin-left: -50px; /* Ajustement pour le chevauchement */
     z-index: 1; /* S'assurer que .nom se superpose à .image */
     position: relative;
