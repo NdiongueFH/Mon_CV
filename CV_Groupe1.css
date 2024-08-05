@@ -1,7 +1,3 @@
-/*Le pseudo-élément `:root` en CSS permet de définir des variables globales pour un document, 
-représentant l'élément `<html>`. Utilisé pour centraliser la gestion des styles comme 
-les couleurs et les polices, il facilite la maintenance du CSS en rendant 
-les valeurs facilement réutilisables et modifiables dans toute la feuille de style.*/
 
 :root {
     /* Définition des couleurs de base */
@@ -9,7 +5,7 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --teal-2: #146551; /* Teal moyen foncé */
     --teal-3: #007566; /* Teal vif */
     --teal-4: #589A8D; /* Teal clair */
-    --teal-5: #fff; /* Blanc très clair */
+    --teal-5: #fff; /* Teal très clair */
     --Noir-6: #000000; /*Noir*/
     --Blanc-7: #ffffff; /*Blanc*/
 
@@ -21,10 +17,11 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --color-border: var(--teal-2); /* Couleur pour les bordures */
     --color-background: var(--teal-5); /* Couleur de fond général */
     --color-text: var(--Noir-6); /*Couleur pour le texte de fond*/
-    --color-white: var(--Blanc-7); /*Couleur blanche pour les texte de fon d'une balise"*/
+    --color-text: var(--Blanc-7); /*Couleur blanche pour les texte de fon d'une balise"*/
 }
 
 /*Intégration de nos polices d'écritures générales pour notre texte, titre et les sous-titres*/
+
 :root {
     /* Polices */
     --font-title: 'Montserrat', sans-serif;
@@ -43,55 +40,47 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 body {
     margin: 0;
     padding: 0;
-    color: var(--color-text);
+    color: var(--color-paragraph);
     background-color: var(--color-background);
     font-family: var(--font-text);
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
 }
-.edu_exp {
-    display: grid;
-    grid-row: 20px;
-   
-}
-.metier {
-    margin-left: 15%;
-}
-.diplome {
-    margin-left: 15%;
-    text-align: ;
-}
-.titre_edu, .titre_exp{
-    background-color: #4CAF50;
-    color: var(--color-title);
-    padding: 10px;
-    font-size: var(--font-size-title);
-    margin-bottom: 10px;
-    margin-right: 1000px;
-    padding-right: 5px;
-    text-indent: 70%;
-}
-.diplome{
-    display: flex;
-    flex-direction: column;
-    align-content: first baseline;
-}
-.metier{
-    display: flex;
-    flex-direction: column;
-    align-content: first baseline;
-}
-.info_exp{
-    display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-    flex-direction: column;
-    text-align: justify;
-}
-.colored-box{
-    /* content: "■ "; */
-    color: var(--color-border);
-    width: 10px;
-    height: 10px;
-    background-color: var(--teal-1);
-    margin-right: 5px;
-}
+.titre_edu_exp{
 
+    font-size: var(--font-size-title);
+    font-family: var(--font-title);
+    background-color: var(--color-title);
+    width: 30%;
+    text-indent: 60%;
+    color: var(--Noir-6);
+    
+    }
+    /*partie education*/
+    .info_edu{
+    font-size: var(--font-size-normal);
+    font-family: var(--font-text);
+    color: var(--Noir-6);
+    background-color: var(--color-background);
+    
+    }
+    /*l espace entre les deux bloc d'information*/
+    .espace{
+    
+    margin-left: 50px;
+    align-content: baseline;
+    }
+    /*creation de carree avant les ecriture*/
+    #carre li{
+    
+    display: flex;
+    position: relative;
+    }
+    
+    #carre li::before{
+    content:"■"; 
+    font-size: 50px;
+    color: var(--color-title);
+    position: absolute;
+    margin-left: -40px;
+    }
