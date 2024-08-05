@@ -85,7 +85,7 @@ body {
     position: relative;
     z-index: 1;
     top: 400px;
-    right: -15%;
+    right: -30%;
     }
     
     #principal {
@@ -105,8 +105,8 @@ body {
 /*Image*/
 .image {
     border: 12px solid var(--color-border);
-    width: 300px;  /* Assurez-vous que le conteneur est carré */
-    height: 300px;
+    width: 600px;  /* Assurez-vous que le conteneur est carré */
+    height: 600px;
     border-radius: 50%;  /* Rend l'image ronde */
     overflow: hidden;  /* Cache les parties de l'image qui débordent */
     z-index: 2; /* Nous Plaçons l'image au-dessus de .nom */
@@ -116,7 +116,7 @@ body {
 #image_profil {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Garantit que l'image couvre tout l'espace sans déformation */
+    object-fit: contain;  /* Garantit que l'image couvre tout l'espace sans déformation */
 }
 /*Le nom du profil*/
 .nom {
@@ -159,10 +159,10 @@ body {
 }
 /*partie education*/
 .info_edu{
-font-size: 25px;
+font-size: var(--font-size-normal);
 font-family: var(--font-text);
 color: var(--color-text);
-padding: 100px;
+padding: 120px;
 
 }
 /*l espace entre les deux bloc d'information*/
@@ -188,7 +188,8 @@ margin-left: 50px;
 
 /*Footer*/
 #footer {
-    padding: 40px 0 85px 0;
+    /*height: 40px;*/
+    padding: 40px 0 75px 0;
     background-color: var(--color-backgroundFoncé);
 }
 
@@ -345,7 +346,7 @@ margin-left: 50px;
     background-color: #fbfdfd;
  }
  #resaux{
-    margin: 630px 0 30px 0;
+    margin: 350px 0 30px 0;
     /* align-content: center; */
     display: block;
     justify-content: center;
@@ -359,13 +360,10 @@ margin-left: 50px;
  .social-icons i {
     justify-content: center;
     font-size: 30px;
+    border: 1px #ffffff solid;
     border-radius: 5px;
-    padding: 5px;
     color: #000000;
     background-color: #ffffff;
     margin-left: 50px;
  }
- .social-icons i:hover {
-    background-color: var(--color-backgroundFoncé);
-    color: var(--color-white);
- }
+ 

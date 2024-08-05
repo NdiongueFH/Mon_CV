@@ -3,14 +3,13 @@ représentant l'élément `<html>`. Utilisé pour centraliser la gestion des sty
 les couleurs et les polices, il facilite la maintenance du CSS en rendant 
 les valeurs facilement réutilisables et modifiables dans toute la feuille de style.*/
 
-
 :root {
     /* Définition des couleurs de base */
     --teal-1: #265C4B; /* Teal foncé */
     --teal-2: #146551; /* Teal moyen foncé */
     --teal-3: #007566; /* Teal vif */
     --teal-4: #589A8D; /* Teal clair */
-    --teal-5: #fff; /* Blanc très clair */
+    --teal-5: #f3e675; /* Blanc très clair */
     --Noir-6: #000000; /*Noir*/
     --Blanc-7: #ffffff; /*Blanc*/
 
@@ -21,6 +20,8 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --color-paragraph: var(--teal-2); /* Couleur pour les paragraphes */
     --color-border: var(--teal-4); /* Couleur pour les bordures */
     --color-backgroundFoncé: var(--teal-1); /*Couleur de fond foncée*/
+    --color-paragraph: var(--teal-4); /* Couleur pour les paragraphes */
+    --color-border: var(--teal-2); /* Couleur pour les bordures */
     --color-background: var(--teal-5); /* Couleur de fond général */
     --color-text: var(--Noir-6); /*Couleur pour le texte de fond*/
     --color-white: var(--Blanc-7); /*Couleur blanche pour les texte de fon d'une balise"*/
@@ -44,54 +45,19 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
     --font-size-subtitleProfil: 30px;
 }
 
-/*Intégration de nos polices d'écritures générales pour notre texte, titre et les sous-titres*/
-:root {
-    /* Polices */
-    --font-title: 'Montserrat', sans-serif;
-    --font-text: 'Open Sans', sans-serif;
-    --font-subtitle: 'Roboto', sans-serif;
-
-    /* Taille de police standard et poids */
-    --font-size-normal: 16px; /* Taille de police standard pour le texte */
-    --font-size-title: 28px; /* Taille de police pour les grands titres */
-    --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
-    --font-weight-normal: 400; /* Poids normal de la police */
-    --font-weight-bold: 700; /* Poids en gras */
-    /*Pour le profil la taile du nom et du sous-titre*/
-    --font-size-titleProfil: 45px;
-    --font-size-subtitleProfil: 30px;
-}
-
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
 
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
-* {
-  box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
     color: var(--color-text);
+    /*background-color: var(--color-background);*/
     font-family: var(--font-text);
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
 }
-
-
-#profile {
-    position: relative;
-    z-index: 1;
-    top: 400px;
-    right: -15%;
-    }
-    
-    #principal {
-        margin-top: -320px;
-    }
-
 
 /*Partie Ndiawar Diop*/
     /*Début partie profil de Mon_CV*/
@@ -104,6 +70,7 @@ body {
 }
 /*Image*/
 .image {
+   /* background-color: var(--color-background);*/
     border: 12px solid var(--color-border);
     width: 300px;  /* Assurez-vous que le conteneur est carré */
     height: 300px;
@@ -116,12 +83,12 @@ body {
 #image_profil {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Garantit que l'image couvre tout l'espace sans déformation */
+    object-fit: contain;  /* Garantit que l'image couvre tout l'espace sans déformation */
 }
 /*Le nom du profil*/
 .nom {
     background-color: var(--color-backgroundFoncé);
-    width: 80%;
+    width: 30%;
     height: 200px; /* Aligner la hauteur avec celle de l'image */
     display: flex;
     color: var(--color-white);
@@ -149,20 +116,20 @@ body {
 /*titre de l'ducation education*/
 .titre_edu_exp{
 
-    font-size: var(--font-size-title);
-    font-family: var(--font-title);
-    background-color: var(--color-title);
-    width: 90%;
-    height: 40px;
-    text-indent: 80%;
-    color: var(--color-white);
+font-size: var(--font-size-title);
+font-family: var(--font-title);
+background-color: var(--color-title);
+width: 30%;
+text-indent: 60%;
+
+
 }
 /*partie education*/
 .info_edu{
-font-size: 25px;
+font-size: var(--font-size-normal);
 font-family: var(--font-text);
 color: var(--color-text);
-padding: 100px;
+/*background-color: var(--color-background);*/
 
 }
 /*l espace entre les deux bloc d'information*/
@@ -186,12 +153,6 @@ margin-left: 50px;
    margin-left: -40px;
 }
 
-/*Footer*/
-#footer {
-    padding: 40px 0 85px 0;
-    background-color: var(--color-backgroundFoncé);
-}
-
 /*#principal {
     display: flex;
     background-color: white;
@@ -199,62 +160,44 @@ margin-left: 50px;
     height: 2400px;
     margin: 0;
 }*/
-#corps {
-    display: flex;
-    width: 100%;
-}
-
-.blanc {
-    width: 70%;
-    padding-top: 470px;
-    height: auto;
-}
 .noir {
-    padding-top: 300px;
-    width: 30%;
-    background-color: var(--color-text);
-    height: auto;
-    color: var(--color-white);
-}
-.contact {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically (if height is set) */
-    width: 80%; /* ou toute autre largeur appropriée */
-    margin: 0 auto;
-    padding-top: 80px;
-    color: var(--color-white);
+    width: 690px;
+    background-color: #000000;
+    color: white;
+    padding: 100px 0 0px 0px;
+    height: auto;
+   margin: 0px 0px 0px 1300px;
 }
 
 .titre_contact_skill{
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center; /* Center the title text */
-    /*border: 4px solid var(--color-backgroundFoncé);*/
-    width: 100%; /* Ajuste selon tes besoins */
-    padding: 5px;
- }
- .titre_contact_skill2{
     display: flex;
     flex-wrap: wrap;
-    font-size: 24px;
-    margin-left: 60px;
-    padding-top: 50px;
-    margin-top: 20px;
-   
- }
- h1{
+    font-size: 34px;
+    margin-left: 90px;
+    padding-top: 0px;
+    margin-top: 420px;
+    
+}
+.titre_contact_skill2{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 34px;
+    margin-left: 90px;
+    padding-top: 0px;
+    margin-top: 100px;
+    
+}
+h1{
     border: #007566 solid;
-    width: 400px;
+    width: 500px;
     height: 70px;   
     text-align: center;
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-   
- }
- 
+    
+}
 
 .donnees_contact {
     display: flex;
@@ -268,15 +211,15 @@ margin-left: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    font-size: 20px;
+    font-size: 34px;
     color: #ffffff;
     margin-top: 40px;
 }
 
 .info_contact i {
     color: #007566;
-    font-size: 35px;
-    margin-right: 20px;
+    font-size: 60px;
+    margin-right: 10px;
 }
 
 .info_contact div {
@@ -285,87 +228,76 @@ margin-left: 50px;
 }
 
 .info_contact strong {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .info_contact br {
     display: none;
 }
 .bar-container {
-    width: 400px;
+    width: 500px;
     background-color: black;
     border: 1px solid #007566;
-    overflow: hidden;
-    margin-left: 55px;
- }
- 
- 
- .bar {
-    width: 400px;
-    height: 20px;
-    background-color: #007566;
- }
- .bar1 {
-    width: 200px;
-    height: 20px;
-    background-color: #007566;
- }
- .bar2 {
-    width: 410px;
-    height: 20px;
-    background-color: #007566;
- }
- .bar3 {
-    width: 460px;
-    height: 20px;
-    background-color: #007566;
- }
- 
+    border-radius: 5px;
+    margin-left: 90px;
+}
 
- .donnees_skill{
+.bar {
+    width: 400px;
+    height: 30px;
+    background-color: #007566;
+}
+.bar1 {
+    width: 200px;
+    height: 30px;
+    background-color: #007566;
+}
+.bar2 {
+    width: 410px;
+    height: 30px;
+    background-color: #007566;
+}
+.bar3 {
+    width: 460px;
+    height: 30px;
+    background-color: #007566;
+}
+.donnees_skill{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 20px;
+    font-size: 34px;
     margin-top: 12px;
-    padding-top: 10px;
- }
- 
- .rs-container {
-    width: 300px;
+}
+.rs-container {
+    width: 500px;
     background-color: black;
     border: 1px solid #fcfdfd;
     border-radius: 5px;
-    overflow: hidden;
-    margin-left: 110px;
- }
- .rs {
-    width: 100%;
-    height: 2px;
+    margin-left: 90px;
+}
+.rs {
+    width: 500px;
+    height: 8px;
     background-color: #fbfdfd;
- }
- #resaux{
-    margin: 630px 0 30px 0;
-    /* align-content: center; */
-    display: block;
+}
+#resaux{
+    margin-top: 400px;
+}
+.social-icons {
+    margin-top: 20px;
+padding-left: 140px;
+padding-top: 20px;
+}
+
+
+.social-icons i {
     justify-content: center;
- }
- .social-icons {
- margin-top: 12px;
- padding-left: 100px;
- padding-top: 30px;
- }
- 
- .social-icons i {
-    justify-content: center;
-    font-size: 30px;
+    align-items: center;
+    font-size: 74px;
+    border: 1px #ffffff solid;
     border-radius: 5px;
-    padding: 5px;
     color: #000000;
     background-color: #ffffff;
     margin-left: 50px;
- }
- .social-icons i:hover {
-    background-color: var(--color-backgroundFoncé);
-    color: var(--color-white);
- }
+}
