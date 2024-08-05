@@ -45,30 +45,13 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
 body {
-    margin: 0;
-    padding: 0;
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-text);
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
-}
-* {
-    box-sizing: border-box;
 }
 
-
-#profile {
-position: relative;
-z-index: 1;
-top: 400px;
-right: -30%;
-}
-
-#principal {
-    margin-top: -320px;
-}
 /*Partie Ndiawar Diop*/
     /*Début partie profil de Mon_CV*/
 
@@ -98,7 +81,7 @@ right: -30%;
 /*Le nom du profil*/
 .nom {
     background-color: var(--color-backgroundFoncé);
-    /*width: 80%;*/
+    width: 30%;
     height: 200px; /* Aligner la hauteur avec celle de l'image */
     display: flex;
     color: var(--color-white);
@@ -129,7 +112,7 @@ right: -30%;
 }
 .blanc {
     width: 70%;
-    padding-top: 400px;
+
 }
     /*Partie Anta Maquette Faye
 .titre_edu_exp {
@@ -197,7 +180,6 @@ right: -30%;
 
     /*Partie Noir*/
     .noir {
-        padding-top: 400px;
         width: 30%;
         background-color: var(--color-text);
         height: auto;
@@ -228,116 +210,100 @@ right: -30%;
         color: var(--color-backgroundFoncé); /* Assure-toi que les icônes sont blanches */
         font-size: 34px; /* Ajuste la taille si nécessaire */
     }
-
-.donnees_contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align contact data to the left */
-}
-
-.list_contact {
-    list-style: none;
-    width: 100%;
-}
-
-.icon_contact {
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contactez {
-    font-size: 16px;
-}
-
-.detail, .desc {
-    display: block;
-    font-size: 14px;
-}
-
-
-.donnees_skill {
-    width: 400px; /* Adjust width to fit your design */
-    padding: 20px;
-}
-
-.form-title {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.skill {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.skill label {
-    display: block;
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.skill input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 15px;
-    background: transparent;
-    outline: none;
-}
-
-.skill input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 0;
-    height: 0;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    top: -5px;
-}
-
-/* Webkit browsers */
-.skill input[type="range"]::-webkit-slider-runnable-track {
-    height: 15px;
-    border: 1px solid var(--color-backgroundFoncé);
-}
-
-.skill input[type="range"][value="80"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, var(--color-backgroundFoncé) 0%, var(--color-backgroundFoncé) 80%, var(--color-text) 80%);
-}
-
-.skill input[type="range"][value="70"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, var(--color-backgroundFoncé) 0%, var(--color-backgroundFoncé) 70%, var(--color-text) 70%);
-}
-
-.skill input[type="range"][value="90"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, var(--color-backgroundFoncé) 0%, var(--color-backgroundFoncé) 90%, var(--color-text) 90%);
-}
-
-.skill input[type="range"][value="65"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, var(--color-backgroundFoncé) 0%, var(--color-backgroundFoncé) 65%, var(--color-text) 65%);
-}
-
-#resaux{
-    margin-top: 400px;
-}
-.social-icons {
-    margin-top: 20px;
-padding-left: 140px;
-padding-top: 20px;
-}
-
-
-.social-icons i {
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    border: 1px #ffffff solid;
-    border-radius: 5px;
-    color: #000000;
-    background-color: #ffffff;
-    margin: 20px;
-}
+    .donnees_skill {
+        width: 300px; /* Adjust width to fit your design */
+        padding: 20px;
+    }
+    
+    .form-title {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .skill {
+        margin-bottom: 15px;
+    }
+    
+    .skill label {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .skill input[type="range"] {
+        -webkit-appearance: none; /* Override default appearance */
+        appearance: none;
+        width: 100%;
+        height: 15px; /* Height of the slider */
+    }
+    
+    .skill input[type="range"]::-webkit-slider-runnable-track {
+        height: 15px;
+        background: #444; /* Lighter grey as base track */
+    }
+    
+    .skill input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px; /* Width of the thumb */
+        height: 15px; /* Height of the thumb */
+        background: var(--color-backgroundFoncé); /* Orange color for thumb */
+        cursor: pointer;
+        border-radius: 50%;
+        border: none;
+        position: relative;
+        top: 0;
+    }
+    
+    .skill input[type="range"]:focus::-webkit-slider-runnable-track {
+        background: #555;
+    }
+    
+    /* Mozilla specific styles */
+    .skill input[type="range"]::-moz-range-track {
+        width: 100%;
+        height: 15px;
+        background: #444;
+        border: none;
+    }
+    
+    .skill input[type="range"]::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        border: none;
+        background: var(--color-backgroundFoncé);
+        border-radius: 50%;
+    }
+    
+    /* Fill color for the track based on the thumb position */
+    .skill input[type="range"]::-moz-range-progress {
+        background: var(--color-backgroundFoncé);
+        height: 15px;
+    }
+    
+    .skill input[type="range"]::-ms-track {
+        width: 100%;
+        height: 15px;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    
+    .skill input[type="range"]::-ms-fill-lower {
+        background: var(--color-backgroundFoncé);
+    }
+    
+    .skill input[type="range"]::-ms-fill-upper {
+        background: #444;
+    }
+    
+    .skill input[type="range"]::-ms-thumb {
+        width: 15px;
+        height: 15px;
+        background: var(--color-backgroundFoncé);
+        border-radius: 50%;
+        border: none;
+    }
+    

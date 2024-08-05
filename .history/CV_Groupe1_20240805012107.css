@@ -45,30 +45,13 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
 body {
-    margin: 0;
-    padding: 0;
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-text);
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
-}
-* {
-    box-sizing: border-box;
 }
 
-
-#profile {
-position: relative;
-z-index: 1;
-top: 400px;
-right: -30%;
-}
-
-#principal {
-    margin-top: -320px;
-}
 /*Partie Ndiawar Diop*/
     /*Début partie profil de Mon_CV*/
 
@@ -98,7 +81,7 @@ right: -30%;
 /*Le nom du profil*/
 .nom {
     background-color: var(--color-backgroundFoncé);
-    /*width: 80%;*/
+    width: 30%;
     height: 200px; /* Aligner la hauteur avec celle de l'image */
     display: flex;
     color: var(--color-white);
@@ -129,7 +112,7 @@ right: -30%;
 }
 .blanc {
     width: 70%;
-    padding-top: 400px;
+
 }
     /*Partie Anta Maquette Faye
 .titre_edu_exp {
@@ -197,7 +180,6 @@ right: -30%;
 
     /*Partie Noir*/
     .noir {
-        padding-top: 400px;
         width: 30%;
         background-color: var(--color-text);
         height: auto;

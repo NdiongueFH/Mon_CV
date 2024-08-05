@@ -1,0 +1,118 @@
+/*Le pseudo-élément `:root` en CSS permet de définir des variables globales pour un document, 
+représentant l'élément `<html>`. Utilisé pour centraliser la gestion des styles comme 
+les couleurs et les polices, il facilite la maintenance du CSS en rendant 
+les valeurs facilement réutilisables et modifiables dans toute la feuille de style.*/
+
+:root {
+    /* Définition des couleurs de base */
+    --teal-1: #265C4B; /* Teal foncé */
+    --teal-2: #146551; /* Teal moyen foncé */
+    --teal-3: #007566; /* Teal vif */
+    --teal-4: #589A8D; /* Teal clair */
+    --teal-5: #fff; /* Blanc très clair */
+    --Noir-6: #000000; /*Noir*/
+    --Blanc-7: #ffffff; /*Blanc*/
+
+    /* Utilisation des couleurs pour différents éléments */
+
+    --color-title: var(--teal-1); /* Couleur pour les titres */
+    --color-subtitle: var(--teal-3); /* Couleur pour les sous-titres */
+    --color-paragraph: var(--teal-2); /* Couleur pour les paragraphes */
+    --color-border: var(--teal-4); /* Couleur pour les bordures */
+    --color-backgroundFoncé: var(--teal-1); /*Couleur de fond foncée*/
+    --color-background: var(--teal-5); /* Couleur de fond général */
+    --color-text: var(--Noir-6); /*Couleur pour le texte de fond*/
+    --color-white: var(--Blanc-7); /*Couleur blanche pour les texte de fon d'une balise"*/
+}
+
+/*Intégration de nos polices d'écritures générales pour notre texte, titre et les sous-titres*/
+:root {
+    /* Polices */
+    --font-title: 'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --font-subtitle: 'Roboto', sans-serif;
+
+    /* Taille de police standard et poids */
+    --font-size-normal: 16px; /* Taille de police standard pour le texte */
+    --font-size-title: 28px; /* Taille de police pour les grands titres */
+    --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
+    --font-weight-normal: 400; /* Poids normal de la police */
+    --font-weight-bold: 700; /* Poids en gras */
+    /*Pour le profil la taile du nom et du sous-titre*/
+    --font-size-titleProfil: 45px;
+    --font-size-subtitleProfil: 30px;
+}
+
+/*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-family: var(--font-text);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+}
+
+/*Partie Ndiawar Diop*/
+    /*Début partie profil de Mon_CV*/
+
+/*Div Identité*/
+#identite {
+    display: flex;
+    align-items: center; /* Pour aligner verticalement les éléments à l'intérieur */
+    background: none;
+}
+/*Image*/
+.image {
+    background-color: var(--color-background);
+    border: 12px solid var(--color-border);
+    width: 300px;  /* Assurez-vous que le conteneur est carré */
+    height: 300px;
+    border-radius: 50%;  /* Rend l'image ronde */
+    overflow: hidden;  /* Cache les parties de l'image qui débordent */
+    z-index: 2; /* Nous Plaçons l'image au-dessus de .nom */
+    position: relative; /* Nécessaire pour appliquer z-index */
+}
+
+#image_profil {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Garantit que l'image couvre tout l'espace sans déformation */
+}
+/*Le nom du profil*/
+.nom {
+    background-color: var(--color-backgroundFoncé);
+    width: 30%;
+    height: 200px; /* Aligner la hauteur avec celle de l'image */
+    display: flex;
+    color: var(--color-white);
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 20px 0 75px;
+    margin-left: -50px; /* Ajustement pour le chevauchement */
+    z-index: 1; /* S'assurer que .nom se superpose à .image */
+    position: relative;
+}
+#name_cv{
+    font-family: var(--font-title);
+    font-size: var(--font-size-titleProfil);
+    font-weight: var(--font-weight-bold);
+}
+#function {
+    font-family: var(--font-subtitle);
+    font-size: var(--font-size-subtitleProfil);
+    font-weight: var(--font-weight-normal);
+}
+    /*Fin Partie profil de Mon_Cv*/
+/*Fin Partie Ndiawar Diop*/
+
+/*Partie Section 2*/
+    /*Partie Anta Maquette Faye*/
+.titre_edu_exp {
+    width: 100%;
+    height: 15px;
+    background-color: var(--color-backgroundFoncé);
+    color: var(--color-white);
+    text-align: right;
+    padding: 50px auto;
+}

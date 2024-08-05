@@ -52,12 +52,7 @@ body {
     font-family: var(--font-text);
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
 }
-* {
-    box-sizing: border-box;
-}
-
 
 #profile {
 position: relative;
@@ -98,7 +93,7 @@ right: -30%;
 /*Le nom du profil*/
 .nom {
     background-color: var(--color-backgroundFoncé);
-    /*width: 80%;*/
+    width: 80%;
     height: 200px; /* Aligner la hauteur avec celle de l'image */
     display: flex;
     color: var(--color-white);
@@ -106,7 +101,7 @@ right: -30%;
     justify-content: center;
     text-align: left;
     padding: 0 20px 0 75px;
-    margin-left: -50px; /* Ajustement pour le chevauchement */
+    margin-left: -20px; /* Ajustement pour le chevauchement */
     z-index: 1; /* S'assurer que .nom se superpose à .image */
     position: relative;
 }
