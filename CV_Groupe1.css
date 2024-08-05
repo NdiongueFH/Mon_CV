@@ -49,6 +49,7 @@ body {
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
 }
+<<<<<<< HEAD
 
 
 .titre_edu_exp{
@@ -143,3 +144,45 @@ body {
     margin-right: 5px; */
 /* }
  */ 
+=======
+/*titre de l'ducation education*/
+.titre_edu_exp{
+
+font-size: var(--font-size-title);
+font-family: var(--font-title);
+background-color: var(--color-title);
+width: 30%;
+text-indent: 60%;
+
+
+}
+/*partie education*/
+.info_edu{
+font-size: var(--font-size-normal);
+font-family: var(--font-text);
+color: var(--color-text);
+background-color: var(--color-background);
+
+}
+/*l espace entre les deux bloc d'information*/
+.espace{
+
+margin-left: 50px;
+/*text-align:initial;*/
+}
+/*creation de carree avant les ecriture*/
+#carre li{
+
+    display: flex;
+    position: relative;
+}
+
+ #carre li::before{
+   content:"■"; 
+   font-size: 50px;
+   color: var(--color-title);
+   position: absolute;
+   margin-left: -40px;
+}
+
+>>>>>>> 76372e8d49a5300572da895dc0596f3457b7bb6d
