@@ -1,0 +1,203 @@
+/*Le pseudo-élément `:root` en CSS permet de définir des variables globales pour un document, 
+représentant l'élément `<html>`. Utilisé pour centraliser la gestion des styles comme 
+les couleurs et les polices, il facilite la maintenance du CSS en rendant 
+les valeurs facilement réutilisables et modifiables dans toute la feuille de style.*/
+
+:root {
+    /* Définition des couleurs de base */
+    --teal-1: #265C4B; /* Teal foncé */
+    --teal-2: #146551; /* Teal moyen foncé */
+    --teal-3: #007566; /* Teal vif */
+    --teal-4: #589A8D; /* Teal clair */
+    --teal-5: #f3e675; /* Blanc très clair */
+    --Noir-6: #000000; /*Noir*/
+    --Blanc-7: #ffffff; /*Blanc*/
+
+    /* Utilisation des couleurs pour différents éléments */
+
+    --color-title: var(--teal-1); /* Couleur pour les titres */
+    --color-subtitle: var(--teal-3); /* Couleur pour les sous-titres */
+    --color-paragraph: var(--teal-4); /* Couleur pour les paragraphes */
+    --color-border: var(--teal-2); /* Couleur pour les bordures */
+    --color-background: var(--teal-5); /* Couleur de fond général */
+    --color-text: var(--Noir-6); /*Couleur pour le texte de fond*/
+    --color-white: var(--Blanc-7); /*Couleur blanche pour les texte de fon d'une balise"*/
+}
+
+/*Intégration de nos polices d'écritures générales pour notre texte, titre et les sous-titres*/
+:root {
+    /* Polices */
+    --font-title: 'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --font-subtitle: 'Roboto', sans-serif;
+
+    /* Taille de police standard et poids */
+    --font-size-normal: 16px; /* Taille de police standard pour le texte */
+    --font-size-title: 28px; /* Taille de police pour les grands titres */
+    --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
+    --font-weight-normal: 400; /* Poids normal de la police */
+    --font-weight-bold: 700; /* Poids en gras */
+}
+
+/*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
+/*body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-family: var(--font-text);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*#principal {
+    display: flex;
+    background-color: white;
+    width: 1600px;
+    height: 2400px;
+    margin: 0;
+}*/
+.noir {
+    display: flex;
+    width: 690px;
+    background-color: #000000;
+    color: white;
+    padding: 100px 0 0px 0px;
+    height: auto;
+   margin: 0px 0px 0px 1300px;
+}
+
+.titre_contact_skill{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 34px;
+    margin-left: 90px;
+    padding-top: 0px;
+    margin-top: 420px;
+    
+}
+.titre_contact_skill2{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 34px;
+    margin-left: 90px;
+    padding-top: 0px;
+    margin-top: 100px;
+    
+}
+h1{
+    border: #007566 solid;
+    width: 500px;
+    height: 70px;   
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    
+}
+
+.donnees_contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.info_contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 34px;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+.info_contact i {
+    color: #007566;
+    font-size: 60px;
+    margin-right: 10px;
+}
+
+.info_contact div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_contact strong {
+    font-size: 30px;
+}
+
+.info_contact br {
+    display: none;
+}
+.bar-container {
+    width: 500px;
+    background-color: black;
+    border: 1px solid #007566;
+    border-radius: 5px;
+    margin-left: 90px;
+}
+
+.bar {
+    width: 400px;
+    height: 30px;
+    background-color: #007566;
+}
+.bar1 {
+    width: 200px;
+    height: 30px;
+    background-color: #007566;
+}
+.bar2 {
+    width: 410px;
+    height: 30px;
+    background-color: #007566;
+}
+.bar3 {
+    width: 460px;
+    height: 30px;
+    background-color: #007566;
+}
+.donnees_skill{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 34px;
+    margin-top: 12px;
+}
+.rs-container {
+    width: 500px;
+    background-color: black;
+    border: 1px solid #fcfdfd;
+    border-radius: 5px;
+    margin-left: 90px;
+}
+.rs {
+    width: 500px;
+    height: 8px;
+    background-color: #fbfdfd;
+}
+#resaux{
+    margin-top: 400px;
+}
+.social-icons {
+    margin-top: 20px;
+padding-left: 140px;
+padding-top: 20px;
+}
+
+
+.social-icons i {
+    justify-content: center;
+    align-items: center;
+    font-size: 74px;
+    border: 1px #ffffff solid;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #ffffff;
+    margin-left: 50px;
+}
