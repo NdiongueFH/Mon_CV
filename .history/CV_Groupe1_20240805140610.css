@@ -106,6 +106,26 @@ body {
     /*Fin Partie profil de Mon_Cv*/
 /*Fin Partie Ndiawar Diop*/
 
+
+/*Debut du Corps de notre CV*/
+.corps {
+    width: 100% auto;
+    display: flex;
+    align-content: center;
+}
+
+.blanc {
+    width: 70% auto;
+    height: auto;
+}
+
+.noir {
+    width: 30% auto;
+    height: auto;
+    background-color: #000000;
+    padding: 100px;
+}
+
 /*titre de l'ducation education*/
 .titre_edu_exp{
 
@@ -145,4 +165,5 @@ margin-left: 50px;
    position: absolute;
    margin-left: -40px;
 }
+/*Fin du Corps de notre CV*/
 
