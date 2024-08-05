@@ -40,7 +40,7 @@ les valeurs facilement réutilisables et modifiables dans toute la feuille de st
 }
 
 /*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
-body {
+/*body {
     margin: 0;
     padding: 0;
     color: var(--color-text);
@@ -53,21 +53,20 @@ body {
     align-items: center;
     height: 100vh;
 }
-#principal {
+/*#principal {
     display: flex;
     background-color: white;
     width: 1600px;
     height: 2400px;
     margin: 0;
-}
+}*/
 .noir {
     display: flex;
-    flex-wrap: wrap;
     width: 690px;
     background-color: #000000;
     color: white;
     padding: 100px 0 0px 0px;
-    height: 2301px;
+    height: auto;
    margin: 0px 0px 0px 1300px;
 }
 
@@ -92,7 +91,7 @@ body {
 h1{
     border: #007566 solid;
     width: 500px;
-    height: 70px;    
+    height: 70px;   
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -140,7 +139,6 @@ h1{
     background-color: black;
     border: 1px solid #007566;
     border-radius: 5px;
-    overflow: hidden;
     margin-left: 90px;
 }
 
@@ -176,7 +174,6 @@ h1{
     background-color: black;
     border: 1px solid #fcfdfd;
     border-radius: 5px;
-    overflow: hidden;
     margin-left: 90px;
 }
 .rs {
